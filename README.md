@@ -13,3 +13,5 @@ https://uni.roseltorg.ru/article/bolee-100-komand-borolis-za-pobedu
 
 Используемые технологии:
 Django, python
+
+Для корректной работы необходимо распаковать архивы в data и в static
