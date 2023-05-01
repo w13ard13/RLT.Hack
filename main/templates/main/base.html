@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+	<head> 
+		<title>Сервис рейтингования</title> 
+	</head>
+	<body>
+		<div>
+			Сервис рейтингования поставщиков
+		</div>
+		<div>
+			&nbsp
+		<div/>
+		<div>
+		<form method="POST">{% csrf_token %}
+			{{ form.as_p }}
+		<button type="submit">Submit</button>
+		</div>
+		<div>
+			<table>
+			  <tr>
+				{% for col in df.columns %}
+				  <td>
+					{{col}}
+				  </td>
+				{% endfor %}
+			  </tr>
+				{% for index, row in df.iterrows %}
+				  <tr>
+					{% for cell in row %}
+					  <td>
+						{{cell}}
+					  </td>
+					{% endfor %}
+				  </tr>
+				{% endfor %}
+			</table>
+		</div>
+	</body>
+
+</html>
